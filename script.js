@@ -8,7 +8,7 @@ function checkForm() {
         <p>Name: Ülfet Yaylacı</p>
         <p>Flight: TK1974</p>
         <p>From: Ankara Esenboğa Airport</p>
-        <p>To: 33.3149413°, 35.3237104°</p>
+        <p>To: 34.712312663057396, 32.488674181150074</p>
         <p>Date: 2025-05-31</p>
         <p>Time: 01:30</p>
         <p>Seat: 18A</p>

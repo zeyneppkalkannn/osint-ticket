@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PNR Doğrulama</title>
+  <script src="script.js"></script>
+</head>
+<body>
+  <h2>Uçuş Doğrulama</h2>
+  <form onsubmit="return checkForm()">
+    PNR: <input type="text" id="pnr"><br>
+    CAPTCHA: 5 + 4 = <input type="text" id="captcha"><br>
+    <input type="submit" value="Doğrula">
+  </form>
+  <div id="result" style="margin-top: 20px;"></div>
+</body>
+</html>

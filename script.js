@@ -1,4 +1,5 @@
 let correctCaptcha = 0;
+const expectedPNR = "GN8721"; // Şifresiz PNR
 
 window.onload = function () {
   generateCaptcha();
@@ -8,7 +9,10 @@ function generateCaptcha() {
   const a = Math.floor(Math.random() * 10);
   const b = Math.floor(Math.random() * 10);
   correctCaptcha = a + b;
-  document.getElementById("captcha-question").innerText = `CAPTCHA: ${a} + ${b} =`;
+  const captchaLabel = document.getElementById("captcha-question");
+  if (captchaLabel) {
+    captchaLabel.innerText = `CAPTCHA: ${a} + ${b} =`;
+  }
 }
 
 function checkForm() {
@@ -20,7 +24,7 @@ function checkForm() {
     return false;
   }
 
-  if (pnr === "GN8721" && parseInt(captcha) === correctCaptcha) {
+  if (pnr === expectedPNR && parseInt(captcha) === correctCaptcha) {
     document.getElementById("result").innerHTML = `
       <h3>BOARDING PASS</h3>
       <p><strong>Name:</strong> Ülfet Yaylacı</p>
@@ -36,8 +40,8 @@ function checkForm() {
   } else {
     alert("Hatalı PNR veya CAPTCHA.");
     document.getElementById("result").innerHTML = "";
-    generateCaptcha(); // Yanlış girişte yeni CAPTCHA oluştur
+    generateCaptcha();
   }
 
-  return false; // Sayfa yenilenmesin
+  return false;
 }

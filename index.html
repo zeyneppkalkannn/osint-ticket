@@ -8,11 +8,11 @@
 </head>
 <body>
   <h2>Uçuş Doğrulama</h2>
-  <form onsubmit="return checkForm()">
+  <form id="pnrForm" onsubmit="return checkForm()">
     <label for="pnr">PNR:</label>
     <input type="text" id="pnr" placeholder="PNR kodunu girin">
 
-    <label id="captcha-question">CAPTCHA:</label>
+    <label id="captcha-question">CAPTCHA: yükleniyor...</label>
     <input type="text" id="captcha" placeholder="Sonucu girin">
 
     <input type="submit" value="Doğrula">
